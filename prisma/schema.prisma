@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model books {
+  title      String?   @db.MediumText
+  author     String?   @db.MediumText
+  rating     Float?    @db.Float
+  isChatGpt  Boolean?
+  cover      String?   @db.VarChar(255)
+  takeaways  String?   @db.MediumText
+  review     String?   @db.MediumText
+  timestamp  DateTime  @default(now()) @db.DateTime(0)
+  updatedAt  DateTime? @db.DateTime(0)
+  createdAt  DateTime? @db.DateTime(0)
+  isFavorite Boolean?
+  id         Int       @id @default(autoincrement())
+
+  @@ignore
+}
+
+model untitled_table_2 {
+  id Int @id @default(autoincrement())
+}
+
+model untitled_table_3 {
+  id Int @id @default(autoincrement())
+}

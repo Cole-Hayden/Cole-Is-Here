@@ -227,3 +227,25 @@
     transform: rotate(0deg);
   }
 }
+
+.coleIsHere{
+  background-color: #73A580;
+  background-size: cover;
+height: 50000px;
+margin: 0;}
+
+*{
+  margin: 0;
+  padding: 0;
+ }
+
+.booksText{
+  text-align:center;
+  /*font-family: "Times New Roman", Times, serif;*/
+  font-family: "Roboto Mono";
+
+}
+
+ .alignCenter{
+  text-align: center;
+ }
